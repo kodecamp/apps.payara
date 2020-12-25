@@ -1,0 +1,7 @@
+#!/bin/bash
+java -jar ${PAYARA_MICRO_HOME}/payara-micro-${ACTIVE_PAYARA_VERSION}.jar \
+ --deploy ./target/services \
+ --logProperties ./MICRO-INF/logging.properties \
+ --contextroot /
+
+

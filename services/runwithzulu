@@ -1,0 +1,4 @@
+#!/bin/bash
+ ${JDK8_ZULU}/bin/java -jar ${HOME}/DevTools/SERVERS/payara-micro-5.194.jar \
+ --deploy ./target/services \
+ --logProperties ./MICRO-INF/logging.properties

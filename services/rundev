@@ -1,0 +1,9 @@
+#!/bin/bash
+
+export JAVA_HOME=/home/sunil_arc/DevTools/dcevm-11.0.5+5
+mvn compile war:exploded
+java -jar $JVM_OPTIONS $PAYARA_MICRO_HOME/payara-micro-${ACTIVE_PAYARA_VERSION}.jar \
+ --prebootcommandfile ./MICRO-INF/myjvmcommands.txt \
+ --deploy ./target/services --contextroot / \
+ --logProperties ./MICRO-INF/logging.properties
+

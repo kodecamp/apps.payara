@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# run the any file which has main method in it
+find src/ | entr -p $M2_HOME/bin/mvn -q package -Preload
